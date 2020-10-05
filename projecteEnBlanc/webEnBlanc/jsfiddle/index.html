@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Git</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header id="header">
+    <h1>
+    Este es el titulo de la pagina
+    </h1>
+  </header>
+  
+  <div id="contenedor">
+  <button type="button" id="boton" onclick="myScript()">
+  Clickame
+  </button>
+  
+  <p id="saludo"></p>
+  <p id="texto-boton"> </p>
+  
+  </div>
+
+  <script>
+    var contador = 0;
+    var nombreUser = prompt("Escribe tu nombre de usuario");
+
+    function myScript() {
+        document.getElementById("texto-boton").innerHTML = "Hola mundo: "+nombreUser;
+        contador++;
+        document.getElementById("saludo").innerHTML = "Se ha saludado: "+contador+ " veces";
+    }
+  </script>
+</body>
+
+</html>
