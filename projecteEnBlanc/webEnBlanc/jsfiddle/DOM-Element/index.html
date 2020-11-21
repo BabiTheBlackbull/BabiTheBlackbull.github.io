@@ -11,7 +11,7 @@
 <body>
     <h1>DOM-Element</h1>
 
-    <h2>Encontrar elementos del HTML por ID:</h2>
+    <h2>Encontrar elementos del HTML por ID</h2>
     <h3>Una de las formas más sencillas de localizar un elemento del HTML en el DOM es
         buscando este elemento por su ID. Un ejemplo de esto es el siguiente:</h3>
     <p class="text">var texto = document.getElementById("texto");</p>
@@ -20,7 +20,28 @@
 
     <hr>
 
-    <h2>Encontrar elementos del HTML por Tag (etiqueta):</h2>
+    <h2>Encontrar elementos del HTML por Tag (etiqueta)</h2>
+    <h3>Ahora vamos a ver un ejemplo de seleccionar un elemento del HTML por etiqueta, por ejemplo, todos 
+        los elementos "p":
+    </h3>
+    <p class="text">var x = document.getElementByTagName("p");</p>
+    <p>Con esto, habremos guardado todos los elementos con etiqueta "p" en la variable x, y ya podremos
+        modificarlos como queramos
+    </p>
+
+    <hr>
+
+    <h2>Encontrar elementos del HTML por el nombre de la clase</h2>
+    <h3>Vamos a seguir viendo ahora un ejemplo de como localizar todos los elementos HTML con el mismo
+        nombre de clase:
+    </h3>
+    <p class="text">var x = document.getElementByClassName("clase");</p>
+    <p>Utilizando el getElementByClassName() podremos seleccionar todos los elementos de una clase específica
+    </p>
+
+    <hr>
+
+    <h2>Encontrar elementos del HTML mediante selectores CSS</h2>
     <h3>Ahora vamos a ver un ejemplo de seleccionar un elemento del HTML por etiqueta, por ejemplo, todos 
         los elementos "p"
     </h3>
