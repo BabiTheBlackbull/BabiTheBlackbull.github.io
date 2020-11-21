@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM-Element</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <h1>DOM-Element</h1>
 
     <h2>Encontrar elementos del HTML por ID:</h2>
-    <h3>Una de las formas más sencillas de localizar un elemento del HTML en el DOM es 
+    <h3>Una de las formas más sencillas de localizar un elemento del HTML en el DOM es
         buscando este elemento por su ID. Un ejemplo de esto es el siguiente:</h3>
-    <p id="text-id">var texto = document.getElementById("texto");</p>
-    <p>Con esto, el método devolverá el elemento como un objeto, si no, la variable texto tendrá un valor de null</p>
+    <p class="text">var texto = document.getElementById("texto");</p>
+    <p>Con esto, el método devolverá el elemento como un objeto, si no, la variable
+        texto tendrá un valor de null</p>
+
+    <h2>Encontrar elementos del HTML por Tag (etiqueta):</h2>
+    <h3>Ahora vamos a ver un ejemplo de seleccionar un elemento del HTML por etiqueta, por ejemplo, todos 
+        los elementos "p"
+    </h3>
+    <p class="text">var x = document.getElementByTagName("p");</p>
+    <p>Con esto, habremos guardado todos los elementos con etiqueta "p" en la variable x, y ya podremos
+        modificarlos como queramos
+    </p>
 </body>
+
 </html>
