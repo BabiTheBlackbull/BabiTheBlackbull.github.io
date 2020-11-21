@@ -42,12 +42,21 @@
     <hr>
 
     <h2>Encontrar elementos del HTML mediante selectores CSS</h2>
-    <h3>Ahora vamos a ver un ejemplo de seleccionar un elemento del HTML por etiqueta, por ejemplo, todos 
-        los elementos "p"
+    <h3>Para encontrar elementos del HTML que tienen un selector CSS específico, como es una id, un valor de atributo,
+        una clase, utilizaremos la siguiente sintaxis:
     </h3>
-    <p class="text">var x = document.getElementByTagName("p");</p>
-    <p>Con esto, habremos guardado todos los elementos con etiqueta "p" en la variable x, y ya podremos
-        modificarlos como queramos
+    <p class="text">var x = document.querySelectorAll("p.texto");</p>
+    <p>Con esto, el programa nos devolverá una lista de todos los elementos "p" con clase texto
+    </p>
+
+    <hr>
+
+    <h2>Encontrar elementos del HTML por Coleccion de Objetos (Array)/h2>
+    <h3>Finalmente, podemos encontrar elementos que esten dentro de una colección de objetos con el siguiente método:
+    </h3>
+    <p class="text">var x = document.forms["elementos"]</p>
+    <p>Utilizando este método forms, habremos guardado todos los elementos en una variable, ahora lo que tendríamos que hacer
+        es mostrar cada elemento. Esto lo podriamos hacer con un bucle.
     </p>
 </body>
 
