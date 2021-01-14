@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url('fondo-de-pantalla-HD.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    padding: 20px;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    width: 650px;
+    background-color: black;
+    margin: 0px auto;
+}
+
+#bloque1{
+    margin-top: 20px;
+    padding: 40px;
+    border: 1px solid black;
+    width: 650px;
+    margin: 0px auto;
+    min-height: 300px;
+    background-color: white;
+}
+
+#bloque1 #dwec{
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #e8710a;
+    color: white;
+    text-decoration: none;
+}
+
+#bloque1 #diw{
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #9334e6;
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+#bloque1 #sandbox{
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #90DA82;
+    color: white;
+    text-decoration: none;
+    margin-top: 100px;
+}
+
+h2{
+    margin-top: 50px;
+}
+
+#foto{
+    width: 600px;
+    height: 350px;
+}
+
+#video{
+    width: 600px;
+    height: 350px;
+}
