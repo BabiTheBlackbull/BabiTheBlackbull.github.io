@@ -1,0 +1,18 @@
+
+body {
+    background-image: url("/RECOMENSSEM/media/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#puntos{
+    
+    text-align: center; 
+    margin: 3% 
+
+}
+
+.card > img{
+    margin-top: 5px;
+    margin-right: 10%;
+}

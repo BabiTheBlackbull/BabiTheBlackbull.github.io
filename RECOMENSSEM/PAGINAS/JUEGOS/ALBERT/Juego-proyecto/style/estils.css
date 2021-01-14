@@ -1,0 +1,145 @@
+#imagenCarrito{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+img{
+    position: absolute;
+}
+body {
+    margin: 0; 
+    height: 100%; 
+	overflow: hidden;
+	background-image: url("../media/fondojuego2.png");
+	background-repeat: no-repeat;
+	background-size: 1920px 1050px ;
+}
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+	background-image: url("../media/instruccions-joc.png");
+	background-size: 1920px 1050px ;
+  }
+  #StartButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	margin-right: 250px;
+	text-align: center;
+}
+#StartButton:hover {
+	background-color:#5cbf2a;
+}
+#StartButton:active {
+	position:relative;
+	top:1px;
+}
+#CancelButton {
+	background-color:#e62525;
+	border-radius:28px;
+	border:1px solid #7a1111;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #783b3b;
+	margin-left: 250px;
+  	text-align: center;
+}
+#CancelButton:hover {
+	background-color:#ff0f0f;
+}
+#CancelButton:active {
+	position:relative;
+	top:1px;
+}
+#divButtons {
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+}
+#timer {
+    position: absolute;
+    top: 75px;
+	right: 15px;
+	
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:12px 13px;
+	text-decoration:none;
+
+	display: none;
+
+}
+#menuFinal{
+	position: absolute;
+    top: 15%;
+	left: 40%;
+	text-align: center;
+    
+}
+#btnFinal {
+	background-color:#0099ff;
+	border-radius:28px;
+	border:1px solid #005c99;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #003d66;
+	margin: 5px;
+  	text-align: center;
+}
+#imagenResultado{
+	position: relative;
+	text-align: center;
+	display: inline;
+}
+
+#PuntuacioMomentania{
+	box-shadow:inset 0px 1px 0px 0px #1664c4;
+	background:linear-gradient(to bottom, #1664c4 5%, #1664c4 100%);
+	background-color:#1664c4;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	display: none;
+	margin: 15px;
+}
+
