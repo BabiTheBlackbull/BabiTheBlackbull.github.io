@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Hola</h1>
+    <h1 id="titulo">Resumen visual del querySelector() y el querySelectorAll()</h1>
+    <img src="img/Captura.PNG" alt="" width="800px">
+
+    <hr><br>
+
+    <div style="padding: 20px;">
+        <h2 style="margin-top: 50px;">Tabla básica</h2>
+        <table border="1" style="margin-bottom: 50px;">
+            <caption>Fútbol 1º división</caption>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <th>2003/2004</th>
+                    <th>2004/2005</th>
+                </tr>
+                <tr class="fila">
+                    <th>Campeón</th>
+                    <td>Valencia C.F.</td>
+                    <td>F.C. Barcelona</td>
+                </tr>
+                <tr class="fila">
+                    <th>Subcampeón</th>
+                    <td>F.C. Barcelona</td>
+                    <td>R. Madrid</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <hr><br>
+
+    <div style="padding: 20px;">
+        <h2>Creación de elementos</h2>
+        <button onclick="myFunction()">Pulsame para crear un botón</button>
+        <div id="elementos" style="margin-top: 10px; margin-bottom: 50px;"></div>
+    </div>
+    
+
+    <hr><br>
+
+    <div style="padding: 20px;">
+        <h2>Eliminación de elementos de la página</h2>
+        <p id="provisional">Texto a eliminar</p>
+        <button onclick="eliminar()">Púlsame para eliminar el texto de arriba</button>
+    </div>
+
+    <hr><br>
+
+    <div style="padding: 20px;">
+        <h2>Información de un elemento con data-</h2>
+        <p id="informacion" data-info="klk" data-tipo="texto random">soy el texto informativo</p>
+        <button onclick="dimeInfo()">Púlsame para eliminar el texto de arriba</button>
+    </div>
+
+
+    <script>
+        var parrafo = document.getElementById("provisional");
+
+        function eliminar() {
+            provisional.parentNode.removeChild(parrafo);
+        }
+
+        function myFunction() {
+            var btn = document.createElement("BUTTON");
+            btn.innerHTML = "Boton creado correctamente";
+            document.getElementById("elementos").appendChild(btn);
+
+            btn.onclick = function () {
+                alert("Has hecho click");
+            };
+        }
+
+        function dimeInfo() {
+            let p = document.getElementById("informacion");
+            let atributos = p.getAttribute("data-info");
+            alert("La información de tu caja es: "+atributos);
+        }
+    </script>
+
 </body>
+
 </html>
