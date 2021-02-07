@@ -6,11 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-
-<body>
-    <h1>Podemos ver la información de las personas en la consola</h1>
-
     <script>
         var personas = {
             persona1: {
@@ -31,7 +26,57 @@
         }
 
         console.log(personas);
+
+        function EmmagatzemaCookie(cookie_name, cookie_value, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
+        }
+
+        function RecuperarCookie(cookie_name) {
+            var name = cookie_name + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var username = RecuperarCookie("username");
+            if (username != "") {
+                alert("Welcome again " + username);
+            } else {
+                username = prompt("Please enter your name:", "");
+                if (username != "" && username != null) {
+                    EmmagatzemaCookie("username", username, 365);
+                }
+            }
+        }
+
+
+        document.cookie = "persona1=pepe, año_nacimiento=2000, localidad=Barcelona";
+        document.cookie = "persona2=carlos, año_nacimiento=2003, localidad=Barcelona";
+        document.cookie = "persona3=dani, año_nacimiento=2002, localidad=Barcelona";
+        document.cookie = "persona4=esteban, año_nacimiento=2004, localidad=Barcelona";
+
+        document.write("Personas que participan en el evento: " + document.cookie);
+
     </script>
+</head>
+
+<body onload="checkCookie()">
+    <h1>Podemos ver la información de las personas en la consola</h1>
+
+
 </body>
 
 </html>
