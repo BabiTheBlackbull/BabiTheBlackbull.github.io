@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webComponents</title>
+    <link rel="stylesheet" href="./webComponents/wc_nom/wc_nom.css">
+    
+</head>
+
+<body>
+    <div id="plato1" onclick="myFunction()">
+        Hola soy el plato 1
+    </div>
+
+    <div id="plato2" onclick="myFunction2()">
+        Hola soy el plato 2
+    </div>
+
+    <br>
+
+    <div id="info">
+
+    </div>
+
+    <br>
+
+    <li id="plato-1" data-tipo="pasta">Macarrones</li>
+    <li id="plato-2" data-tipo="ensalada">Ensalada Rusa</li>
+    <li id="plato-3" data-tipo="canelon">Canelones de pato</li>
+
+    <br>
+
+    <form class="form-inline" method="POST" action="">
+        <label>Nombres: </label>
+        <input type="text" id="nombre1" placeholder="Ingrese contenido" class="form-control" onkeyup="PasarValor();">
+
+        <br>
+        <label>Nombres: </label>
+        <input type="text" id="nombre2" placeholder="Recibe contenido" class="form-control">
+    </form>
+
+    <br>
+
+    <first-element></first-element>
+    <second-element></second-element>
+</body>
+<script src="./webComponents/wc_nom/wc_events.js"></script>
+<script src="./webComponents/wc_nom/wc_config.js"></script>
+<script src="./webComponents/wc_nom/wc_nom.js"></script>
+
+</html>

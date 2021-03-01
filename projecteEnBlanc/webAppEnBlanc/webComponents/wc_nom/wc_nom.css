@@ -1,0 +1,23 @@
+#plato1{
+    width: 100px;
+    border: 1px solid black;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#plato2{
+    width: 100px;
+    border: 1px solid black;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+}
+
+li{
+    color: blue;
+}
+
+li[data-tipo='pasta'] {
+    color: magenta;
+}
