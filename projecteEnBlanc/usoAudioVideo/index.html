@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center; margin: 0px auto;">
+        <video id="medio" width="720" height="400">
+            <source src="video/video.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <input type="button" id="reiniciar" value="reiniciar">
+            <input type="button" id="retrasar" value="&laquo;">
+            <input type="button" id="play" value="&#9658;">
+            <input type="button" id="adelantar" value="&raquo;">
+            <input type="button" id="silenciar" value="silenciar">
+            <input type="button" id="active_silencio" value="activar volumen">
+            <br><br>
+            Tiempo actual: <span id="tiempo"></span> || Tiempo total: <span id="tiempoTotal"></span>
+            <br>
+            <label id="timer" for="progress" role="timer"></label>
+            <progress id="progress" max="100" value="0">Progress</progress>
+        </nav>
+
+        <audio id="sonido">
+            <source src="audio/explosion.mp3" type="audio/ogg">
+        </audio>
+
+    </div>
+
+
+    <script>
+        const progress = document.getElementById("progress");
+        const timer = document.getElementById("timer");
+
+        function accionPlay() {
+            if (!medio.paused && !medio.ended) {
+                medio.pause();
+                play.value = '\u25BA'; //\u25BA
+                document.body.style.backgroundColor = '#fff';
+            }
+            else {
+                medio.play();
+                play.value = '||';
+                document.body.style.backgroundColor = 'grey';
+            }
+        }
+        function accionReiniciar() {
+            medio.currentTime = 0;
+        }
+        function accionRetrasar() {
+            medio.currentTime = medio.currentTime - 10;
+        }
+        function accionAdelantar() {
+            medio.currentTime = medio.currentTime + 10;
+        }
+        function accionSilenciar() {
+            medio.muted = true;
+        }
+        function accionDesSilenciar() {
+            medio.muted = false;
+        }
+
+        function hora(segundos) {
+            var d = new Date(segundos * 1000);
+            var hora = (d.getHours() == 0) ? 23 : d.getHours() - 1;
+            var hora = (hora < 9) ? "0" + hora : hora;
+            var minuto = (d.getMinutes() < 9) ? "0" + d.getMinutes() : d.getMinutes();
+            var segundo = (d.getSeconds() < 9) ? "0" + d.getSeconds() : d.getSeconds();
+            return hora + ":" + minuto + ":" + segundo;
+        }
+
+
+        function iniciar() {
+
+            medio = document.getElementById('medio');
+            play = document.getElementById('play');
+            reiniciar = document.getElementById('reiniciar');
+            retrasar = document.getElementById('retrasar');
+            adelantar = document.getElementById('adelantar');
+            silenciar = document.getElementById('silenciar');
+            active_silencio = document.getElementById('active_silencio');
+
+            play.addEventListener('click', accionPlay);
+            reiniciar.addEventListener('click', accionReiniciar);
+            retrasar.addEventListener('click', accionRetrasar);
+            adelantar.addEventListener('click', accionAdelantar);
+            silenciar.addEventListener('click', accionSilenciar);
+            active_silencio.addEventListener('click', accionDesSilenciar);
+
+            medio.addEventListener("timeupdate", function (ev) {
+                document.getElementById("tiempo").innerHTML = hora(medio.currentTime);
+                document.getElementById("tiempoTotal").innerHTML = hora(medio.duration);
+            }, true);
+
+            function progressLoop() {
+                setInterval(function () {
+                    var tiempoTotal;
+                    progress.value = Math.round((medio.currentTime / medio.duration) * 100);
+                    timer.innerHTML = progress.value + " %";
+
+                    if (progress.value < 80) {
+                        document.getElementById("tiempo").style.color = "green";
+                    }
+                    if (progress.value >= 80) {
+                        document.getElementById("tiempo").style.color = "orange";
+                    }
+                    if (progress.value >= 90) {
+                        document.getElementById("tiempo").style.color = "red";
+                    }
+                });
+            }
+
+            medio.addEventListener("play", progressLoop);
+        }
+
+        var klk = document.getElementById("sonido");
+
+        medio.onended = function () {
+            klk.play();
+        };
+
+        window.addEventListener('load', iniciar, false);
+
+
+    </script>
+</body>
+
+</html>
