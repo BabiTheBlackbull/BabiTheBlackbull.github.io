@@ -4,7 +4,10 @@
     left: 0;
 }
 img{
-    position: absolute;
+    
+}
+.imgFood{
+	position: absolute
 }
 body {
     margin: 0; 
@@ -12,7 +15,8 @@ body {
 	overflow: hidden;
 	background-image: url("../media/fondojuego2.png");
 	background-repeat: no-repeat;
-	background-size: 1920px 1050px ;
+	/*background-size: 1920px 1050px ;*/
+	background-size: 100%;
 }
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -27,7 +31,8 @@ body {
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
 	background-image: url("../media/instruccions-joc.png");
-	background-size: 1920px 1050px ;
+	/*background-size: 1920px 1050px ;*/
+	background-size: 100%;
   }
   #StartButton {
 	background-color:#44c767;

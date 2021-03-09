@@ -117,7 +117,7 @@
 			</section>
 			
 			
-			<img id="imgCheck" src="media/check.gif" width="100px" height="100px">
+			<img id="imgCheck" src="media/checkk.gif" width="100px" height="100px">
 			<img id="imgCros" src="media/wrong.gif" width="100px" height="100px">
 			
 			

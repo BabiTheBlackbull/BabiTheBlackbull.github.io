@@ -1,6 +1,6 @@
 <?php
   include_once("../../php_partials/menu.php");
-
+  
 ?>
 
 
@@ -16,31 +16,31 @@
 
        <!-- ICONOS -->
 	   <link href="../../FONTAWESOME/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-    <title>Inició sesión</title>
+    <title><?php echo $lang['IniciarSesionTitulo'] ?></title>
 </head>
 <body>
 <div class="container mt-5 col-sm-5" >
     <div class="card">
       <div class="card-header text-white bg-primary">
-      Inició sesión
+        <?php echo $lang['IniciarSesionTitulo'] ?>
         </a>
       </div>
       <div class="card-body">
         <form action="/RECOMENSSEM/php_controllers/iniciarSesionController.php" method="POST"  enctype="multipart/form-data">
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label lang" key="Correo">Correo</label>
+            <label class="col-sm-3 col-form-label lang" key="Correo"><?php echo $lang['Correo'] ?></label>
             <div class="col-sm-9">
-              <input type="email" name="Correo" id="Correo" class="form-control" placeholder="Correo Electronico" required>
+              <input type="email" name="Correo" id="Correo" class="form-control" placeholder="<?php echo $lang['CorreoElectronico'] ?>" required>
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label lang" key="Contrasenya">Contraseña</label>
+            <label class="col-sm-3 col-form-label lang" key="Contrasenya"><?php echo $lang['Contrasenya'] ?></label>
             <div class="col-sm-9">
-              <input type="password" name="Contraseña" id="Contraseña" class="form-control" placeholder="Contraseña" required>
+              <input type="password" name="Contraseña" id="Contraseña" class="form-control" placeholder="<?php echo $lang['Contrasenya'] ?>" required>
             </div>
           </div>
           <div class="float-right">
-            <button type="submit" name="get" class="btn btn-primary">Iniciar sesión</button>
+            <button type="submit" name="get" class="btn btn-primary"><?php echo $lang['BtnIniciarSesion'] ?></button>
           </div>
           </form>
           
@@ -53,16 +53,16 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">No se puede iniciar sesion</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><?php echo $lang['NoPuedeIniciarSesion'] ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Credenciales no validas
+      <?php echo $lang['CredNoValidas'] ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lang['BtnCerrar'] ?></button>
       </div>
     </div>
   </div>
@@ -73,16 +73,16 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><?php echo $lang['RegistroTitulo'] ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Registro completado con exito, hora de iniciar sesion...
+        <?php echo $lang['RegistroCompletado'] ?>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><?php echo $lang['BtnCerrar'] ?></button>
       </div>
     </div>
   </div>
@@ -94,7 +94,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="../../js/script.js" charset="utf-8"></script> 
 
 
 <?php

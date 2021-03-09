@@ -29,6 +29,7 @@ function setAltura(){
     var heightProducto = "45";
     var poscicionInicialProducto = 35;
     var img = document.createElement('img'); 
+    
 
     var opcion = Math.floor(Math.random() * 2);
 
@@ -41,6 +42,7 @@ function setAltura(){
         rutaProd = otrosProductos[Math.floor(Math.random() * otrosProductos.length)];
     }
             img.id = "imagen" + numeroDeProductos; 
+            img.className = "imgFood"
             img.src = rutaProd; 
             img.width = widthProducto;
             img.height = heightProducto;

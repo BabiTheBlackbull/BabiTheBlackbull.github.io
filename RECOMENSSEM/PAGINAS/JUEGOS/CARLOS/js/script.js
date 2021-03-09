@@ -248,9 +248,7 @@ function imgOk(){
 		img.style.display = "none";
 	}, delayInMilliseconds);
 	
-	
 	setTimeout();
-	
 }
 
 
@@ -277,14 +275,14 @@ function sonidoOk(){
 	var sonidoOK = document.getElementById("sonidoOK");
 	sonidoOK.currentTime = 0;
 	sonidoOK.play();
-	sonidoOK.volume = 0.70;
+	sonidoOK.volume = 0.50;
 	
 }	
 function sonidoFallo(){
 	var sonidoOK = document.getElementById("sonidoFallo");
 	sonidoOK.currentTime = 0;
 	sonidoOK.play();
-	sonidoOK.volume = 0.70;
+	sonidoOK.volume = 0.50;
 }	
 function sonidoPerdido(){
 	var sonidoOK = document.getElementById("sonidoPerdido");
@@ -403,7 +401,7 @@ function reproducirMusica(){
 	// reproducir musica 
 	var musica = document.getElementById("musica");
 	musica.play();
-	musica.volume = 1.00;
+	musica.volume = 0.20;
 	
 	// iniciamos el contador del tiempo y el crono
 	timpoYcrono();
